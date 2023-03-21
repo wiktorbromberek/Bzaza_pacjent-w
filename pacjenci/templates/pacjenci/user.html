@@ -1,0 +1,29 @@
+{% extends 'pacjenci/main.html' %}
+{% block content %}
+<!-- {% include 'pacjenci/status.html' %} -->
+
+<div class="row-user ">
+	<div class="info">
+		<span class="wizytys">Twoje wizyty:</span>
+	</div>
+			<table class="tabela">
+				<tr>
+					<th class="dane">Data</th>
+					<th class="dane">Lekarz</th>
+					<th class="dane">Oddział</th>
+					<th class="dane">Adnotacje</th>
+
+				</tr>
+				{% for wizyta in wizyts %}
+				<tr>
+					<td class="dane2">{{wizyta.date}}</td>
+					<td class="dane2">{{wizyta.lekarz}}</td>
+					<td class="dane2">{{wizyta.oddział}}</td>
+					<td class="dane2">{{wizyta.content}}</td>
+				</tr>
+
+				{% endfor %}
+			</table>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends 'pacjenci/main.html' %}
+{% load static %}
+{% block content %}
+
+<br>
+<div class="row-sett">
+        <div class="btns-sett">
+            <h3 style="text-align: center;" >Ustawienia Profilu</h3>
+            <a href="{% url 'home' %}" class="btn-back">Wróć do profilu</a>
+    </div>
+        <div class="form-sett">
+            <form action="" method="POST"  >
+                {% csrf_token %}
+                
+                {{form.as_p}}
+                <input type="submit" class="btn-subm " name="update information">
+            </form>
+    </div>
+</div>
+{% endblock %}

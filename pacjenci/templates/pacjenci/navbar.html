@@ -1,0 +1,21 @@
+
+{% load authfun %}
+{% load static %}
+<nav class=" ">
+	<p class="navp">Klinika wielkiego uśmiechu</p> 
+	<div class=" " id=" ">
+		<ul class="list">
+			{% if request.user|isInGroup:"admin"  %}
+			<li class="second">
+				<a class="home-link " href="{% url 'home' %}">Dashboard</a>
+			</li>
+			{% else %}
+			<li class="second">
+				<a href="{% url 'konto' %}" class="nav-link">Ustawienia Profilu</a>
+			</li>
+			{% endif %}
+		</ul>
+	</div>
+	<span class="hello">Witaj, {{request.user}}</span>
+	<span><a class="logout" href="{% url 'logout' %}">Wyloguj</a></span>
+</nav>

@@ -1,0 +1,234 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #ebeff5;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+.row {
+	margin: 5px;
+}
+.brand-name{
+	color: #fff;
+	font-size: 18px;
+	margin: 16px;
+}
+.footer{
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 25px;
+	line-height: 50px;
+	background-color: #333;
+	height: 50px;
+	width: 100%;
+	color: #fff;
+}
+.row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.tabela{
+	margin: 20px;
+	width: 90%;
+	background-color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	
+}
+.dane{
+	font-weight: bold;
+	padding: 10px;
+	border-bottom: 1px solid black;
+}
+.row2{
+	text-align: center;
+}
+.profil{
+	color: #000;
+}
+
+tr{
+	padding: 10px;
+} 
+td{
+	padding: 10px;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+nav{
+	color: #fff;
+	height: 60px;
+	font-size: 24px;
+	display: flex;
+	background-color: #444;
+	align-items: center;
+	justify-content: space-between;
+	text-decoration: none;
+}
+.list{
+	list-style-type: none;
+}
+.navp{
+	position: relative;
+	left: 30px;
+}
+.second{
+	position: relative;
+	left: -240px;
+}
+.logout{
+	position: relative;
+	right: 30px;
+	color: #fff;
+}
+.hello{
+	position: relative;
+	right: -240px;
+}
+.row-pacjent{
+	display: flex;
+	justify-content: space-evenly;
+}
+.karta{
+	width: 25%;
+	height: 150px;
+	font-weight: bold;
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	border-radius: 5px;
+}
+.karta-small{
+	font-size: 18px;
+}
+.btn-pacjent{
+	color: #000;
+}
+.btn-wizyta{
+	color: #000;
+}
+.dane2{
+	text-align: center;
+	font-weight: bold;
+	border-bottom: 1px solid black;
+	border-right: 0px solid black;
+	border-left: 0px solid black;
+}
+.del{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 50px;
+	border-radius: 10px;
+}
+.formdel{
+	background-color: #fff;
+	height:100px;
+	padding: 20px;
+	
+}
+.formflex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn-del{
+	background-color: red;
+	border-radius: 5px;
+	font-size: 15px;
+	padding: 5px;
+	margin: 20px;
+}
+.btn-sub{
+	font-size: 15px;
+	height: 30px;
+	border-radius: 5px;
+	padding: 5px;
+}
+.wiz{
+	display: flex;
+	justify-content: center;
+	margin: 10px;
+	align-items: center;
+	font-size: 24px;
+}
+.form-div{
+	padding: 20px;
+	height: 100px;
+	width: 90%;
+	background-color: #fff;
+	border-radius: 5px;
+}
+.date-format{
+	margin-bottom: 5px;
+}
+.form-div-upt{
+	padding: 20px;
+	height: 60px;
+	width: 90%;
+	background-color: #fff;
+	border-radius: 5px;
+	font-size: 18px;
+}
+.row-status{
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+}
+.wizytys{
+	font-weight: bold;
+	padding: 10px;
+	font-size: 18px;
+	margin: 20px;
+}
+.row-user{
+	margin-top: 10px;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+.row-sett{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 25px;
+}
+.btn-back{
+	color: #000;
+}
+.btn-subm{
+	color: #000;
+}
+.btns-sett{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	color: #000;
+	background-color: #fff;
+	height: 150px;
+	margin: 10px;
+	border-radius: 5px;
+	padding: 10px;
+}
+.form-sett{
+	background-color: #fff;
+	border-radius: 5px;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 10px;
+}

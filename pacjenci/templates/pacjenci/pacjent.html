@@ -1,0 +1,87 @@
+{% extends 'pacjenci/main.html' %}
+ {% block content %}
+<br />
+
+<div class="row-pacjent">
+	<div class="karta ">
+		<div class=" karta-pacjent">
+			<h5>Profil pacjenta: </h5>
+				<h5>{{pacjent.name}}</h5>
+			<br />
+			<a
+				href="{% url 'create_wizyta' pacjent.id %}"
+				class="btn-wizyta"
+				>Dodaj wizytę</a
+			>
+		</div>
+	</div>
+	<div class="karta karta-small">
+		<div class=" ">
+			<h5>Dane kontaktowe</h5>
+			<br />
+			<p>Adres E-mail: {{pacjent.email}}</p>
+			<p>Nr.Telefonu: {{pacjent.phone}}</p>
+		</div>
+	</div>
+
+	<div class="karta ">
+		<div class=" ">
+			<h5 style="text-align: center;">Umówione wizyty</h5>
+			<br />
+			<h1 style="text-align: center; padding: 10px">{{wizyts_count}}</h1>
+		</div>
+	</div>
+</div>
+<br />
+
+
+<br />
+<div class="row-pacjent">
+			<table class="tabela">
+				<tr>
+					<th class="dane">Lekarz</th>
+					<th class="dane">Specjalizacja</th>
+					<th class="dane">Oddział</th>
+					<th class="dane">Termin</th>
+					<th class="dane">Edycja</th>
+					<th class="dane">Usuń</th>
+				</tr>
+
+				{% for wizyta in wizyts %}
+				<tr>
+					<td class="dane2">{{wizyta.lekarz}}</td>
+					<td class="dane2">{{wizyta.lekarz.specjalizacja}}</td>
+					<td class="dane2">{{wizyta.oddział.name}}</td>
+					<td class="dane2">{{wizyta.date}}</td>
+					<th class="dane2">
+						<a
+							class="btn-pacjent"
+							href="{% url 'update_wizyta' wizyta.id %}"
+							>Update</a
+						>
+					</th>
+					<th class="dane">
+						<a
+							class="btn-pacjent"
+							href="{% url 'delete_wizyta' wizyta.id %}"
+							>Delete</a
+						>
+					</th>
+				</tr>
+
+				{% endfor %}
+			</table>
+</div>
+
+{% endblock %}
+
+<!-- <div class="row">
+	<div class="col">
+		<div class="card card-body">
+			<form method="get">
+				{{myFilter.form}}
+				<button class="btn btn-primary" type="submit">Search</button>
+			</form>
+		</div>
+	</div>
+</div> -->

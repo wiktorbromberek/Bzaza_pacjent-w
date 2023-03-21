@@ -1,0 +1,15 @@
+{% extends 'pacjenci/main.html' %} 
+{% load static %} 
+{% block content %}
+
+<div class="wiz">
+		<div class="form-div-upt">
+			<form method="POST" action="">
+				{% csrf_token %} 
+				{{form}}
+				<input type="submit" name="submit" id="" />
+			</form>
+	</div>
+</div>
+
+{% endblock %}

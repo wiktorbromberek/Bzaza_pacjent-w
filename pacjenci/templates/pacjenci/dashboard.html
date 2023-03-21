@@ -1,0 +1,35 @@
+{% extends 'pacjenci/main.html' %} 
+{% block content %} 
+<!-- <input type="datetime-local"> -->
+<!-- {{myFilter.form}} -->
+{% include 'pacjenci/status.html'%}
+<div class="row-pacjent">
+	<table class="tabela">
+		<tr>
+			<th></th>
+			<th class="dane">Pacjent</th>
+			<th class="dane">Nr.Telefonu</th>
+			<th class="dane">Adres E-mail</th>
+		</tr>
+		{% for pacjent in pacjents %}
+		<tr class="row2">
+			<td class="dane">
+				<a class="profil" href="{% url 'pacjent' pacjent.id %}">Profil</a>
+			</td>
+			<td class="dane">
+				{{pacjent.name}}
+			</td>
+			<td class="dane">
+				{{pacjent.phone}}
+			</td>
+			<td class="dane">
+				{{pacjent.email}}
+			</td>
+		</tr>
+		{% endfor %}
+	</table>
+	
+</div>
+
+{% endblock %}
+ 

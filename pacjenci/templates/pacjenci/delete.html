@@ -1,0 +1,18 @@
+{% extends 'pacjenci/main.html' %}
+{% load static %}
+{% block content %}
+
+<br />
+<div class="del">
+		<div class="formdel">
+			<p>Jesteś pewnien, że chcesz usunąć wizytę: {{item}}</p>
+			<form  class="formflex" action="{% url 'delete_wizyta' item.id %}" method="POST">
+				{% csrf_token %}
+				<br>
+				<a class="btn-del" href="{% url 'home' %}">Anuluj</a>
+				<input class="btn-sub" type="submit" name="Confirm" id="" />
+			</form>
+	</div>
+</div>
+
+{% endblock %}
